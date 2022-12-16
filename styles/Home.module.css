@@ -21,7 +21,7 @@
 	transition: color 0.15s ease;
 }
 .nav:hover {
-	color: rgb(13, 111, 190);
+	color: #7240a8;
 }
 .navimg {
 	width: 400px;
@@ -57,13 +57,13 @@
 	text-align: center;
 	padding-top: 50px;
 	padding-bottom: 100px;
-	color: #179bd7;
+	color: #7240a8;
 	text-shadow: 5px 5px white;
 }
 /* The £ on balance */
 
 .this {
-	color: #1100ff;
+	color: white;
 }
 .hbutton {
 	width: 200px;
@@ -104,8 +104,8 @@
 	display: table;
 }
 .card:hover, .card:focus, .card:active {
-	color: #0070f3;
-	border-color: #0070f3;
+	color: #7240a8;
+	border-color: #7240a8;
 }
 .card h2 {
 	vertical-align: middle;
@@ -155,7 +155,7 @@
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 .emailbox:hover {
-	box-shadow: 0 0px 10px 0 #04afe4;
+	box-shadow: 0 0px 10px 0 #7240a8;
 	transition: 0.2s;
 }
 .passwordbox {
@@ -170,7 +170,7 @@
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 .passwordbox:hover {
-	box-shadow: 0 0px 10px 0 #04afe4;
+	box-shadow: 0 0px 10px 0 #7240a8;
 	transition: 0.2s;
 }
 .rememberme {
@@ -186,7 +186,7 @@
 	transition: 0.2s;
 }
 .signinbutton:hover {
-	border-color: #0070f3;
+	border-color: #7240a8;
 	transition: 0.2s;
 }
 /* Media queries for responsiveness */

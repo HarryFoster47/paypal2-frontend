@@ -6,7 +6,7 @@ const Footer = () => {
          
         <footer className={styles.footer}>
          
-            <p>This is the text that can be seen within the footer</p>
+            <p>Made by Leon, Ben, Rash and Harry</p>
      
         </footer>
 

@@ -1,189 +1,214 @@
 .container {
-  padding: 0 2rem;
+	padding: 0 2rem;
 }
 /* The navigation bar itself */
-.navbar{
-  text-align: center;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+
+.navbar {
+	text-align: center;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 /* The links within the navigation bar */
-.nav{
-  padding: 15px 50px;
-  font-size: 50px;
-  font-weight: bolder;
-  text-align: center;
-  transition: color 0.15s ease;
+
+.nav {
+	padding: 15px 50px;
+	font-size: 50px;
+	font-weight: bolder;
+	text-align: center;
+	transition: color 0.15s ease;
 }
-.nav:hover{
-  color: rgb(13, 111, 190);
+.nav:hover {
+	color: rgb(13, 111, 190);
 }
-.navimg{
-  width: 400px ;
-  height: 97px ;
-  transition: 0.2s;
+.navimg {
+	width: 400px;
+	height: 97px;
+	transition: 0.2s;
 }
-.navimg:hover{
- opacity: 60%;
- transition: 0.2s;
+.navimg:hover {
+	opacity: 60%;
+	transition: 0.2s;
 }
 /* General page layout */
+
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	min-height: 100vh;
+	padding: 4rem 0;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .code {
-  background: white;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+	background: white;
+	border-radius: 5px;
+	padding: 0.75rem;
+	font-size: 1.1rem;
+	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
-
 /* The user's balance */
-.balance{
-  font-weight: bolder;
-  font-size: 100px;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 100px;
-  color:#179bd7;
-  text-shadow: 5px 5px white;
-}
 
-/* The £ on balance */
-.this{
-  color: #1100ff;
- }
- .hbutton{
-  width: 200px ;
-  height: 50px ;
-  
- }
-/* The footer at the bottom of the page */
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 10px;
-  border-top: 1px solid white;
-  justify-content: center;
-  align-items: center;
+.balance {
+	font-weight: bolder;
+	font-size: 100px;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	color: #179bd7;
+	text-shadow: 5px 5px white;
 }
+/* The £ on balance */
+
+.this {
+	color: #1100ff;
+}
+.hbutton {
+	width: 200px;
+	height: 50px;
+}
+/* The footer at the bottom of the page */
+
+.footer {
+	display: flex;
+	flex: 1;
+	padding: 10px;
+	border-top: 1px solid white;
+	justify-content: center;
+	align-items: center;
+}
+/* The grid */
 
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	color: white;
 }
-/* The cards */
+/* The cards on home page */
+
 .card {
-  margin: 1rem;
-  padding-top: 1.5rem;
-  text-align: center;
-  text-decoration: none;
-  border: 5px solid white;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 400px;
-  height: 200px ;
-  display: table;
+	margin: 1rem;
+	padding-top: 1.5rem;
+	text-align: center;
+	text-decoration: none;
+	border: 5px solid white;
+	border-radius: 10px;
+	transition: color 0.15s ease, border-color 0.15s ease;
+	width: 400px;
+	height: 200px;
+	display: table;
 }
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.card:hover, .card:focus, .card:active {
+	color: #0070f3;
+	border-color: #0070f3;
 }
 .card h2 {
-  vertical-align: middle;
-  font-size: 2.5rem;
+	vertical-align: middle;
+	font-size: 2.5rem;
 }
 .card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+	margin: 0;
+	font-size: 1.25rem;
+	line-height: 1.5;
 }
-.loginform{
-  padding: 15px;
+/* The contact page boxes */
+
+.ccard {
+	margin: 1rem;
+	padding-top: 1.5rem;
+	text-align: center;
+	text-decoration: none;
+	border: 5px solid white;
+	border-radius: 10px;
+	transition: color 0.15s ease, border-color 0.15s ease;
+	width: 400px;
+	height: 200px;
+	display: table;
 }
-.emailbox{
-  width: 400px;
-  height: 50px;
-  font-size: 25px;
-  border: 4px solid white;
-  border-radius: 10px;
-  outline: none;
-  transition: 0.2s;
-  background-color: black;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.ccard h2 {
+	vertical-align: middle;
 }
-.emailbox:hover{
-  box-shadow: 0 0px 10px 0 #04afe4;
-  transition: 0.2s;
+.ccard p {
+	margin: 0;
+	font-size: 1.25rem;
+	line-height: 1.5;
 }
-.passwordbox{
-  width: 400px;
-  height: 50px;
-  font-size: 25px;
-  border: 4px solid white;
-  border-radius: 10px;
-  outline: none;
-  transition: 0.2s;
-  background-color: black;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* The login page forms, etc */
+
+.loginform {
+	padding: 15px;
 }
-.passwordbox:hover{
-  box-shadow: 0 0px 10px 0 #04afe4;
-  transition: 0.2s;
+.emailbox {
+	width: 350px;
+	height: 50px;
+	font-size: 25px;
+	border: 4px solid white;
+	border-radius: 10px;
+	outline: none;
+	transition: 0.2s;
+	background-color: black;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-.rememberme{
-  font-weight: bold;
+.emailbox:hover {
+	box-shadow: 0 0px 10px 0 #04afe4;
+	transition: 0.2s;
 }
-.signinbutton{
-  height: 35px ;
-  width: 100px ;
-  border: 4px solid white;
-  border-radius: 10px;
-  background-color: black;
-  color: rgb(117, 116, 116);
+.passwordbox {
+	width: 350px;
+	height: 50px;
+	font-size: 25px;
+	border: 4px solid white;
+	border-radius: 10px;
+	outline: none;
+	transition: 0.2s;
+	background-color: black;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-.signinbutton:hover{
-  box-shadow: 0 0px 10px 0 #04afe4;
-  transition: 0.2s;
+.passwordbox:hover {
+	box-shadow: 0 0px 10px 0 #04afe4;
+	transition: 0.2s;
+}
+.rememberme {
+	font-weight: bold;
+}
+.signinbutton {
+	height: 35px;
+	width: 100px;
+	border: 4px solid white;
+	border-radius: 10px;
+	background-color: black;
+	color: rgb(117, 116, 116);
+	transition: 0.2s;
+}
+.signinbutton:hover {
+	border-color: #0070f3;
+	transition: 0.2s;
 }
 /* Media queries for responsiveness */
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-  .balance{
-    font-size: 60px;
-  }
-  .nav{
-    padding: 10px 10px;
-    font-size: 40px;
-  }
-  .navimg{
-    width: 200px ;
-    height: 49px ;
-  }
-  .card{
-    width: 280px;
-    height: 190px ;
-  }
-}
 
+@media (max-width: 600px) {
+	.grid {
+		width: 100%;
+		flex-direction: column;
+	}
+	.balance {
+		font-size: 60px;
+	}
+	.nav {
+		padding: 10px 10px;
+		font-size: 40px;
+	}
+	.navimg {
+		width: 200px;
+		height: 49px;
+	}
+	.card {
+		width: 280px;
+		height: 190px;
+	}
+}

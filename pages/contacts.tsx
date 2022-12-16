@@ -6,6 +6,7 @@ import Navbar from '../components/navbar'
 import Balance from '../components/balance'
 import Footer from '../components/footer'
 import Cards from '../components/cards'
+import Contacts from '../components/contacts'
 
 export default function Home() {
   return (
@@ -20,14 +21,13 @@ export default function Home() {
       {/* The Navigation Bar */}
         <Navbar/>
 
-      {/* The Grid Containing the Cards and User's Balance */}
+      {/* Contacts Box and Add Contact Box */}
       <main className={styles.main}>
-        <Balance/>
-        <Cards/>
+        <Contacts/>
 
       </main>
 
-      {/* The Footer */}
+      {/* The Page Footer */}
         <Footer/>
 
     </div>

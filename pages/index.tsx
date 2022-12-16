@@ -20,11 +20,10 @@ export default function Home() {
       {/* The Navigation Bar */}
         <Navbar/>
 
-      
-      {/* The Grid Containing the Cards and User's Balance */}
       <main className={styles.main}>
+        {/* The User's Balance */}
         <Balance/>
-        
+        {/* The Cards (transfer, etc) */}
         <Cards/>
 
       </main>

@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import { login } from '../pages/util/api';
 
 const Login = () => {
     return (
@@ -19,7 +19,10 @@ const Login = () => {
             <br/><br/>
             <div><label><input className={styles.rememberme} type="checkbox" value="remember-me" /> Remember me</label></div>
             <br/>
-            <div><button className={styles.signinbutton} type="submit">Sign in</button></div>
+            <div><button onClick={function(e) {
+                e.preventDefault() 
+                login('person', 'password123')
+            }} className={styles.signinbutton} type="submit">Sign in</button></div>
         </form></center>
         <br/>
       <center><p>(register button here)</p></center>

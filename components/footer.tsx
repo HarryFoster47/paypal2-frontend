@@ -7,6 +7,7 @@ const Footer = () => {
         <footer className={styles.footer}>
          
             <p>Made by Leon, Ben, Rash and Harry</p>
+            <div><button className={styles.signinbutton} type="submit">Logout</button></div>
      
         </footer>
 

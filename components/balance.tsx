@@ -8,6 +8,7 @@ const Balance = () => {
     useEffect (()=>{
         getbalance().then(data=>{
             console.log(data)
+            setbalance(data)
         })
     }, [balance])
     return (

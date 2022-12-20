@@ -7,6 +7,7 @@ import Balance from '../components/balance'
 import Footer from '../components/footer'
 import Cards from '../components/cards'
 import Login from '../components/login'
+import Register from '../components/register'
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <main className={styles.main}>
         {/* Login Form */}
       <Login/>
-
+      <Register/>
       </main>
 
       {/* The Footer */}

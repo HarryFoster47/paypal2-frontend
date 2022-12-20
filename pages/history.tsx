@@ -6,7 +6,8 @@ import Navbar from '../components/navbar'
 import Balance from '../components/balance'
 import Footer from '../components/footer'
 import Cards from '../components/cards'
-import Withdrawdeposit from '../components/withdrawdeposit'
+import Login from '../components/login'
+import History from '../components/history'
 
 export default function Home() {
   return (
@@ -22,8 +23,11 @@ export default function Home() {
         <Navbar/>
         <Balance/>
 
+
       <main className={styles.main}>
-        <Withdrawdeposit/>
+        {/* Login Form */}
+      <History/>
+
       </main>
 
       {/* The Footer */}

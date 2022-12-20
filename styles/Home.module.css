@@ -189,6 +189,9 @@
 	border-color: #7240a8;
 	transition: 0.2s;
 }
+.historyp{
+	font-weight: bold;
+}
 /* Media queries for responsiveness */
 
 @media (max-width: 600px) {

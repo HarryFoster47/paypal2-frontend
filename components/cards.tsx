@@ -19,7 +19,7 @@ const Cards = () => {
         </div>
 
         <div className={styles.card}>
-          <center><Link href='/'><h2>History •</h2></Link></center>
+          <center><Link href='/history'><h2>History •</h2></Link></center>
         </div>
       </div>
 

@@ -170,7 +170,7 @@ export const withdraw = async (amount: Number) => {
 
 export const deposit = async (amount: Number) => {
   try {
-    const response = await instance.post("/account/withdraw", { amount });
+    const response = await instance.post("/account/deposit", { amount });
     return response.data;
   } catch (e) {
     const error = e as AxiosError;
@@ -196,6 +196,30 @@ export const gettransactions = async () => {
         break;
       case 400:
         return "Invalid limit";
+    }
+  }
+};
+
+export const sendMoney = async (
+  amount: Number,
+  message: String,
+  recipient: String
+) => {
+  try {
+    const response = await instance.post("/account/transfer", {
+      amount,
+      message,
+      recipient,
+    });
+    return;
+  } catch (e) {
+    const error = e as AxiosError;
+    switch (error.status) {
+      case 403:
+        console.log("Not logged in");
+        break;
+      case 400:
+        return "Invalid amount";
     }
   }
 };

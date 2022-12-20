@@ -6,6 +6,7 @@ import Navbar from '../components/navbar'
 import Balance from '../components/balance'
 import Footer from '../components/footer'
 import Cards from '../components/cards'
+import Sendmoney from '../components/sendmoney'
 
 export default function Home() {
   return (
@@ -19,8 +20,10 @@ export default function Home() {
 
       {/* The Navigation Bar */}
         <Navbar/>
+        <Balance/>
 
       <main className={styles.main}> 
+      <Sendmoney/>
       </main>
 
       {/* The Footer */}

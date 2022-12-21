@@ -8,7 +8,10 @@ import Footer from '../components/footer'
 import Cards from '../components/cards'
 import Sendmoney from '../components/sendmoney'
 
-export default function Home() {
+
+
+export default function Home() {  
+
   return (
     <div className={styles.container}>
       {/* The Head */}

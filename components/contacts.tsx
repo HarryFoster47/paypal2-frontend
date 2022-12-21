@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css'
-import { deletecontact } from '../pages/util/api';
-import { getcontacts, addcontact } from '../pages/util/api';
+import { getcontacts, addcontact, deletecontact  } from '../pages/util/api';
 interface Contact{
+  id: Number,
   contact: {
     username: String,
   }
@@ -33,7 +33,11 @@ const Contacts = () => {
           return(
             <center><h2>{obj.contact.username}</h2>
           <Link href='transfer'><button className={styles.signinbutton} type="submit">Send</button></Link>
-         <button className={styles.signinbutton} type="submit">Delete</button>
+         <button onClick={(e)=>{deletecontact(obj.contact.username).then(()=>{
+          setContactList((list)=>{
+            return (list as Contact[]).filter(c=>c.id !== obj.id) as never[]
+          })
+         })} }className={styles.signinbutton} type="submit">Delete</button>
           
         </center>
           );
@@ -47,7 +51,7 @@ const Contacts = () => {
         <h1>Add Contact</h1>
         <input  className={styles.emailbox} type="username" placeholder="username" onChange={(e)=>setContact(e.target.value)}/>
         <br/><br/><br/>
-        <button onClick={(e)=>{ e.preventDefault(); addcontact(contact)}} className={styles.signinbutton} type="submit">Send Request</button>
+        <button onClick={(e)=>{ addcontact(contact)}} className={styles.signinbutton} type="submit">Send Request</button>
         <br/><br/>
       </div>
  

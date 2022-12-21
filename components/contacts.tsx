@@ -17,6 +17,7 @@ const Contacts = () => {
   useEffect(()=>{
     getcontacts().then(data => {
       console.log(data);
+      if (!data) return 
       setContactList(data);
     })
   }, [contact])
@@ -31,7 +32,8 @@ const Contacts = () => {
 
         {contactList.map((obj: Contact) => {
           return(
-            <center><h2>{obj.contact.username}</h2>
+            <div className={styles.ccard}>
+            <center key={Number(obj.id)}><h2>{obj.contact.username}</h2>
           <Link href='transfer'><button className={styles.signinbutton} type="submit">Send</button></Link>
          <button onClick={(e)=>{deletecontact(obj.contact.username).then(()=>{
           setContactList((list)=>{
@@ -40,6 +42,7 @@ const Contacts = () => {
          })} }className={styles.signinbutton} type="submit">Delete</button>
           
         </center>
+        </div>
           );
           })}
 

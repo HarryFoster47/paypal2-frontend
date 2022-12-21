@@ -40,17 +40,19 @@ const History = () => {
       <div className={styles.ccard}>
         
         <h1>Transaction History</h1>
+        <br/>
 
         {transactionList.map((obj: Transfers) => {
           return(
-      <div className={styles.card}>
+      <div key={Number(obj.id)}className={styles.card}>
           <center>
             <p className={styles.historyp}>£<span>{Number(obj.amount)}</span> <span>{(obj.transferredAt).slice(0,10)}</span></p>
             <br/>
             {obj.recipient && <p className={styles.historyp}>Recipient: <span>{obj.recipient.user.username}</span></p>}
             {obj.sender && <p className={styles.historyp}>Sender: <span>{obj.sender.user.username}</span></p>}
             <br/>
-            <p className={styles.historyp}>{obj.message}</p>
+            <p className={styles.historyp}>Message: '{obj.message}'</p>
+            <br/>
           </center>
       </div>
           )

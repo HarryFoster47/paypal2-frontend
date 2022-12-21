@@ -6,12 +6,10 @@ import Navbar from '../components/navbar'
 import Balance from '../components/balance'
 import Footer from '../components/footer'
 import Cards from '../components/cards'
-import Sendmoney from '../components/sendmoney'
+import Login from '../components/login'
+import Register from '../components/register'
 
-
-
-export default function Home() {  
-
+export default function Home() {
   return (
     <div className={styles.container}>
       {/* The Head */}
@@ -25,9 +23,11 @@ export default function Home() {
         <Navbar/>
 
 
-      <main className={styles.main}> 
+
+      <main className={styles.main}>
+        {/* Login Form */}
       <Balance/>
-      <Sendmoney/>
+      <Register/>
       </main>
 
       {/* The Footer */}

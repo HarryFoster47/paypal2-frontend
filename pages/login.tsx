@@ -14,19 +14,20 @@ export default function Home() {
     <div className={styles.container}>
       {/* The Head */}
       <Head>
-        <title>Paypal 2.0</title>
+        <title>Sendo</title>
         <meta name="description" content="A simple way to pay" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favico.ico" />
       </Head>
 
       {/* The Navigation Bar */}
         <Navbar/>
 
 
+
       <main className={styles.main}>
         {/* Login Form */}
+      <Balance/>
       <Login/>
-      <Register/>
       </main>
 
       {/* The Footer */}

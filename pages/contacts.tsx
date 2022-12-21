@@ -13,9 +13,9 @@ export default function Home() {
     <div className={styles.container}>
       {/* The Head */}
       <Head>
-        <title>Paypal 2.0</title>
+        <title>Sendo</title>
         <meta name="description" content="A simple way to pay" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favico.ico" />
       </Head>
 
       {/* The Navigation Bar */}
@@ -23,6 +23,7 @@ export default function Home() {
 
       {/* Contacts Box and Add Contact Box */}
       <main className={styles.main}>
+        <Balance/>
         <Contacts/>
 
       </main>

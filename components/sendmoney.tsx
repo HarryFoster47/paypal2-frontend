@@ -15,7 +15,7 @@ const Sendmoney = () => {
  <div>
  
  
-        <center><form>
+        <center><form className={styles.form}>
             {/* Amount */}
             <h1>Send Money:</h1>
             <br/>

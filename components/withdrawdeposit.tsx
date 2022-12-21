@@ -12,7 +12,7 @@ const Withdrawdeposit = () => {
  <div>
  
  
-        <center><form>
+        <center><form className={styles.form}>
             {/* Amount */}
             <h1>Withdraw/Deposit:</h1>
             <br/>

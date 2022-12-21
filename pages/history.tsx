@@ -14,17 +14,18 @@ export default function Home() {
     <div className={styles.container}>
       {/* The Head */}
       <Head>
-        <title>Paypal 2.0</title>
+        <title>Sendo</title>
         <meta name="description" content="A simple way to pay" />
         <link rel="icon" href="/favico.ico" />
       </Head>
 
       {/* The Navigation Bar */}
         <Navbar/>
-        <Balance/>
+
 
 
       <main className={styles.main}>
+      <Balance/>
         {/* Login Form */}
       <History/>
 

@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
         <title>Sendo</title>
         <meta name="description" content="A simple way to pay" />
-        <link rel="icon" href="./public/favicon.ico" />
+        <link rel="icon" href="/favico.ico" />
       </Head>
 
       {/* The Navigation Bar */}

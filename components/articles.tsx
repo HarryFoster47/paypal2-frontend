@@ -1,14 +1,58 @@
-import React from 'react'
-import styles from "../styles/Articles.module.css"
+import React from "react";
+
+import styles from "../styles/components/Articles.module.css";
 
 const Articles = () => {
-  return (
-    <div>
-        <div className={styles.Articles}>
-            <h3>Our guide</h3>
-        </div>
-    </div>
-  )
-}
+	const articles = [
+		{
+			id: 1,
+			image: "/article1.png",
+			title: "How to Apply for a Sendo Card",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis et voluptas voluptates expedita ut blanditiis quia eveniet nostrum numquam perspiciatis.",
+		},
+		{
+			id: 2,
+			image: "/article2.png",
+			title: "Welcome to Sendo banking",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis et voluptas voluptates expedita ut blanditiis quia eveniet nostrum numquam perspiciatis.",
+		},
+		{
+			id: 3,
+			image: "/article3.png",
+			title: "How to budget",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis et voluptas voluptates expedita ut blanditiis quia eveniet nostrum numquam perspiciatis.",
+		},
+		{
+			id: 4,
+			image: "/article4.png",
+			title: "The rising cost of living",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis et voluptas voluptates expedita ut blanditiis quia eveniet nostrum numquam perspiciatis.",
+		},
+		{
+			id: 5,
+			image: "/article5.png",
+			title: "Planning for the future",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis et voluptas voluptates expedita ut blanditiis quia eveniet nostrum numquam perspiciatis.",
+		},
+	];
+	return (
+		<div className={styles.sectionArticles}>
+			<div className={styles.sectionTitle}>Our guides</div>
+			<div className={styles.articlesWrapper}>
+				{articles.map((item) => (
+					<div className={styles.article}>
+						<div className={styles.imageSection}>
+							<img src={item.image} />
+						</div>
+						<div className={styles.textSection}>
+							<h3>{item.title}</h3>
+							<p>{item.text}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	);
+};
 
-export default Articles
+export default Articles;

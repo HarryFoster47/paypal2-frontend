@@ -1,0 +1,28 @@
+.page {
+	height: 100vh;
+}
+
+.content {
+	width: 100%;
+	height: calc(100% - 50px);
+	min-height: calc(100% - 50px);
+	background-color: #181818;
+	position: relative;
+	top: 50px;
+}
+
+@media screen and (max-width: 800px) {
+	.content {
+		padding-bottom: 80px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.content {
+		top: 70px;
+	}
+
+	.loggedIn {
+		padding-left: 70px;
+	}
+}

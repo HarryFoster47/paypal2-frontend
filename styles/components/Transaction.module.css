@@ -1,0 +1,8 @@
+.article {
+	background-color: #262626;
+	width: 100%;
+	min-height: 80px;
+	border-radius: 9px;
+	display: flex;
+	padding: 10px;
+}

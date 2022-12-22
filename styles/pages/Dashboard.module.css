@@ -1,0 +1,64 @@
+.dashboard {
+	display: flex;
+	flex-direction: column;
+	height: max-content;
+	gap: 40px;
+}
+
+.balanceWrapper {
+	padding: 20px;
+}
+
+.balanceContainer__left {
+	width: 25%;
+	padding-left: 1rem;
+}
+
+.logo {
+	width: 70px;
+	height: 70px;
+}
+
+.balanceContainer__right {
+	width: 90%;
+}
+
+.sendContainer {
+	background-color: #333333;
+	width: 100%;
+}
+
+.historyContainer {
+	background-color: #333333;
+	width: 100%;
+}
+
+.articlesContainer {
+	background-color: #333333;
+	width: 100%;
+}
+
+.balance {
+	font-weight: 700;
+}
+
+@media screen and (min-width: 800px) {
+	.dashboard {
+		display: grid;
+		padding: 30px;
+		grid-template-columns: 4fr 5fr;
+		grid-template-rows: 120px 1fr;
+	}
+
+	.balanceWrapper {
+		padding: 0;
+	}
+}
+
+/* 
+Balance--c
+Send--container
+History--container
+Articles--container
+
+*/

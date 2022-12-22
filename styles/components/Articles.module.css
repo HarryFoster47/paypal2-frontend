@@ -1,0 +1,77 @@
+.sectionArticles {
+	background-color: #333333;
+	border-radius: 9px;
+}
+
+.sectionTitle {
+	font-weight: 400;
+	font-size: 1.2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 15px;
+}
+
+.articlesWrapper {
+	/* background-color: yellow; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+.article {
+	border-radius: 7px;
+	background-color: #262626;
+	display: flex;
+	gap: 5px;
+	margin: 5px 0;
+	overflow: hidden;
+	height: 100px;
+	width: 100%;
+}
+
+.imageSection {
+	max-width: 150px;
+	min-width: 150px;
+
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.imageSection img {
+	/* transform: translateX(-25%); */
+	min-width: auto;
+	height: 100%;
+	filter: grayscale(25%);
+	transition: transform 0.2s ease;
+}
+
+.imageSection img:hover {
+	transform: scale(1.2);
+	filter: grayscale(0);
+}
+
+.textSection {
+	padding-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.textSection h3 {
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+
+.textSection p {
+	display: none;
+	width: 95%;
+}
+
+@media screen and (min-width: 800px) {
+	.textSection p {
+		display: unset;
+		font-size: 12px;
+	}
+}

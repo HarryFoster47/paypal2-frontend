@@ -1,0 +1,33 @@
+.section {
+	background-color: #333333;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+.section h3 {
+	font-weight: 500;
+	padding-left: 7px;
+	padding-bottom: 12px;
+}
+
+.contactsWrapper {
+	width: 100%;
+	display: flex;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.contactsWrapper img {
+	width: 50px;
+	margin: 7px;
+}
+
+.name {
+	font-size: 0.6rem;
+}

@@ -1,0 +1,120 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.headerBar {
+    position: relative;
+    text-align: center;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+    background-color: #282828;
+}
+
+.logoLink img {
+    width: auto;
+    height: 30px;
+}
+
+.logoLink img:hover {
+    opacity: 60%;
+	transition: 0.2s;
+}
+
+.profileBar {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    right: 10px;
+    top: 10px;
+	font-size: 35px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 15px
+}
+
+.profileIcon {
+	cursor: pointer;
+}
+
+.profileMenu {
+    top: 50px;
+    position: absolute;
+	width: 100%;
+	background-color: #404040;
+    z-index: 101;
+}
+
+.mobileUsername {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: #949494;
+}
+
+.desktopUsername {
+    display: none;
+    margin: 0;
+    font-size: 25px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.itemContainer {
+	background-color: #303030;
+    padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+	gap: 10px
+}
+
+.profileMenu__Item {
+	background-color: #282828;
+	width: calc(100% - 10px);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+@media screen and (min-width: 800px) {
+    .headerBar {
+        padding: 15px;
+        justify-content: flex-start;
+    }
+
+    .logoLink img {
+        height: 40px;
+    }
+
+    .profileBar {
+        right: 10px;
+        top: 15px;
+        font-size: 45px;
+    }
+
+    .profileMenu {
+        top: 73px;
+        right: 0;
+        width: 250px;
+    }
+
+    .desktopUsername {
+        display: unset;
+    }
+
+    .mobileUsername {
+        display: none;
+    }
+}

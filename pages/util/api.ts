@@ -47,7 +47,7 @@ export const register = async (
 export const isloggedin = async () => {
   try {
     const response = await instance.get("/auth");
-    return;
+    return response.data;
   } catch (e) {
     const error = e as AxiosError;
     console.log(error);

@@ -8,8 +8,9 @@ import Footer from '../components/footer'
 import Cards from '../components/cards'
 import Login from '../components/login'
 import History from '../components/history'
+import Nav from '../components/nav'
 
-export default function Home() {
+export default function HistoryPage() {
   return (
     <div className={styles.container}>
       {/* The Head */}
@@ -32,7 +33,8 @@ export default function Home() {
       </main>
 
       {/* The Footer */}
-        <Footer/>
+        {/* <Footer/> */}
+        <Nav />
 
     </div>
   )

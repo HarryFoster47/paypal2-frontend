@@ -1,6 +1,30 @@
-.container {
-	padding: 0 2rem;
+.container{
+	background-color:#050505;
+	
 }
+
+.page {
+	height: 100vh;
+}
+
+.contentSection {
+	width: 100%;
+	height: calc(100% - 7vh);
+	background-color: #181818;
+	position: relative;
+	top: 54px;
+	padding-bottom: 7vh;
+}
+
+@media screen and (min-width: 800px) {
+	.contentSection {
+		position: relative;
+		top: 74px;
+		padding-left: 7vw;
+		padding-bottom: 0;
+	}
+}
+
 /* The navigation bar itself */
 
 .navbar {
@@ -8,7 +32,7 @@
 	padding: 10px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 /* The links within the navigation bar */
@@ -20,9 +44,6 @@
 	text-align: center;
 	transition: color 0.15s ease;
 }
-.nav:hover {
-	color: #7240a8;
-}
 .navimg {
 	width: 400px;
 	height: 97px;
@@ -31,6 +52,31 @@
 .navimg:hover {
 	opacity: 60%;
 	transition: 0.2s;
+}
+.profileIcon {
+	font-size: 45px;
+	cursor: pointer;
+}
+
+.profileMenu{
+	width: 100vw;
+	background-color: #404040;
+}
+
+.itemContainer {
+	background-color: #303030;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	
+}
+
+.profileMenu__Item {
+	background-color: #282828;
+	width: 50%;
+
+	
 }
 /* General page layout */
 
@@ -41,9 +87,55 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-left: 10%;
 }
+
+.mainHome {
+	width: 100vw;
+	background-color: pink;
+	height: 100vh;
+}
+
+.mainSection {
+	
+	display: grid; 
+	grid-template-columns: 50% 50% ;
+	grid-template-rows: auto;
+	gap: 10% 10%;
+	
+
+	background-color: #7240a8;
+	height: 100%;
+
+}
+
+.balanceSection {
+	background-color: red;
+	width: 100%;
+	height: 100%;
+}
+
+.transactionSection {
+	background-color: green;
+	width: 100%;
+	height: 100%;
+}
+
+.sendAgainSection {
+	background-color: blue;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.guideSection {
+	background-color: purple;
+	width: 100%;
+	height: 100%;
+}
+
 .code {
-	background: white;
+	background-color: white;
 	border-radius: 5px;
 	padding: 0.75rem;
 	font-size: 1.1rem;
@@ -55,14 +147,13 @@
 	font-weight: bolder;
 	font-size: 100px;
 	text-align: center;
-	
-
 	color: #7240a8;
-	text-shadow: 5px 5px white;
+	text-shadow: 5px 5px #0a0a0a;
 }
 /* The £ on balance */
 
 .this {
+	text-shadow: 5px 5px #0a0a0a;
 	color: white;
 }
 .hbutton {
@@ -111,22 +202,17 @@
 	vertical-align: middle;
 	font-size: 2.5rem;
 }
-.card p {
-	margin: 0;
-	font-size: 1.25rem;
-	line-height: 1.5;
-}
 /* The contact page boxes */
 
 .ccard {
+	background-color: #111111;
 	margin: 1rem;
 	padding-top: 1.5rem;
 	text-align: center;
 	text-decoration: none;
-	border: 5px solid white;
 	border-radius: 10px;
 	transition: color 0.15s ease, border-color 0.15s ease;
-	width: px;
+	width: 800px;
 	height: 200px;
 	display: table;
 }
@@ -138,6 +224,85 @@
 	font-size: 1.25rem;
 	line-height: 1.5;
 }
+/* Add Contact Card */
+
+.addccard {
+	background-color: #111111;
+	margin: 1rem;
+	padding-top: 1.5rem;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: color 0.15s ease, border-color 0.15s ease;
+	width: 500px;
+	height: 200px;
+	display: table;
+}
+.addccard h2 {
+	vertical-align: middle;
+}
+.addccard p {
+	margin: 0;
+	font-size: 1.25rem;
+	line-height: 1.5;
+}
+/* The smaller card inside contact card */
+
+.cccard {
+	background-color: #0c0c0c;
+	margin: 1rem;
+	padding-top: 10px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: color 0.15s ease, border-color 0.15s ease;
+	width: 800px;
+	height: 110px;
+	display: table;
+}
+.cccard h2 {
+	vertical-align: middle;
+}
+
+.csendbutton {
+	width: 140px;
+	height: 50px;
+	font-size: 25px;
+	border: none;
+	border-radius: 10px;
+	background-color: #00a336;
+	color: white;
+	font-weight: bold;
+	transition: 0.2s;
+}
+.csendbutton:hover {
+	background-color: #00b652;
+	transition: 0.2s;
+}
+
+.cdelbutton {
+	width: 140px;
+	height: 50px;
+	font-size: 25px;
+	border: none;
+	border-radius: 10px;
+	background-color: #a50031;
+	color: white;
+	font-weight: bold;
+	transition: 0.2s;
+}
+.cdelbutton:hover {
+	background-color: #64001e;
+	transition: 0.2s;
+}
+/* The Grid used for the contact cards */
+
+.cgrid {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 2000px;
+}
 /* The login page forms, etc */
 
 .loginform {
@@ -147,59 +312,64 @@
 	width: 350px;
 	height: 50px;
 	font-size: 25px;
-	border: 4px solid white;
+	border: 0px;
 	border-radius: 10px;
 	outline: none;
 	transition: 0.2s;
-	background-color: black;
+	background-color: #0c0c0c;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 .emailbox:hover {
-	border-color: #7240a8;
+	background-color: #080808;
 	transition: 0.2s;
+}
+.emailbox::placeholder{
+	color: white;
 }
 .passwordbox {
 	width: 350px;
 	height: 50px;
 	font-size: 25px;
-	border: 4px solid white;
+	border: 0px;
 	border-radius: 10px;
 	outline: none;
 	transition: 0.2s;
-	background-color: black;
+	background-color: #0c0c0c;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 .passwordbox:hover {
 	border-color: #7240a8;
 	transition: 0.2s;
 }
-.rememberme {
-	font-weight: bold;
+.passwordbox::placeholder{
+	color: white;
 }
 .signinbutton {
-	height: 35px;
-	width: 100px;
-	border: 4px solid white;
+	width: 350px;
+	height: 50px;
+	font-size: 25px;
+	border: none;
 	border-radius: 10px;
-	background-color: black;
-	color: rgb(117, 116, 116);
+	background-color: #00a336;
+	color: white;
+	font-weight: bold;
 	transition: 0.2s;
 }
 .signinbutton:hover {
-	border-color: #7240a8;
+	background-color: #00b652;
 	transition: 0.2s;
 }
-.historyp{
+.historyp {
 	font-weight: bold;
 }
-.form{
+.form {
 	padding-top: 50px;
 }
-.noaccount{
+.noaccount {
 	color: white;
 	transition: 0.2s;
 }
-.noaccount:hover{
+.noaccount:hover {
 	color: #7240a8;
 	transition: 0.2s;
 }
@@ -225,4 +395,13 @@
 		width: 280px;
 		height: 190px;
 	}
+	.ccard {
+		width: 280px;
+		height: 190px;
+	}
+	.addccard {
+		width: 400px;
+		height: 190px;
+	}
+
 }

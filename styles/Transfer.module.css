@@ -1,0 +1,10 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.balanceWrapper {
+    padding: 20px;
+}

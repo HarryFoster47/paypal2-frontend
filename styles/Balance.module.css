@@ -1,0 +1,58 @@
+.balanceSectionAlone {
+    border-radius: 9px;
+    padding: 20px;
+    width: max-content;
+    height: 130px;
+    background-color: #333333;
+    display: flex;
+    gap: 20px;
+}
+
+.balanceSectionFit {
+    border-radius: 9px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    display: flex;
+    gap: 20px;
+}
+
+.balanceSectionAlone img {
+    aspect-ratio: 1 / 1;
+    width: auto;
+    height: 100%;
+}
+
+.balanceSectionFit img {
+    aspect-ratio: 1 / 1;
+    width: auto;
+    height: 100%;
+}
+
+.balanceInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.balanceInfo p {
+    margin: 0;
+}
+
+.balanceInfo h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .balanceSectionAlone {
+        height: 130px;
+        gap: 20px;
+    }
+
+    .balanceSectionFit {
+        height: 120px;
+    }
+}

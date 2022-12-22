@@ -1,16 +1,38 @@
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import {useState} from 'react';
+import styles from '../styles/Header.module.css'
 import Image from 'next/image'
+import { RiAccountCircleLine } from 'react-icons/Ri'
 
-const Navbar = () => {
+const Navbar = (props: {loggedIn: boolean}) => {
+    const [show, setShow] = useState(false)
+    const [toggleMenu, setToggleMenu] = useState(false)
+
     return (
-
-    <div className={styles.navbar}>
-        {/* Navigation Links */}
-        <Link className={styles.nav} href="/"><img className={styles.navimg} src='https://i.imgur.com/GXrmJd2.png'/></Link>
-    </div>
-
+        <header className={styles.header}>
+            <div className={styles.headerBar}>
+                <Link className={styles.logoLink} href="/">
+                    <img src="/SendOLogo.png" />
+                </Link>
+                {props.loggedIn && <div className={styles.profileBar}>
+                    <div className={styles.profileIcon} onClick={() => setShow(!show)}><RiAccountCircleLine /></div>
+                    <h2 className={styles.desktopUsername}>Esgrid</h2>
+                </div>}
+            </div>
+            {show && (
+                <div className={styles.profileMenu}>
+                    <h2 className={styles.mobileUsername}>Esgrid</h2>
+                    <div className={styles.itemContainer}>
+                        <div className={styles.profileMenu__Item}>Profile</div>
+                        <div className={styles.profileMenu__Item}>Settings</div>
+                        <div className={styles.profileMenu__Item}>Logout</div>
+                    </div>
+                </div>
+            )}
+        </header>
     );
+        //Account Nav Bar IMG (React icons)
+    
 }
 
 export default Navbar;

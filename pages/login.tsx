@@ -2,14 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Navbar from '../components/navbar'
+import PageLayout from '../components/pagelayout'
 import Balance from '../components/balance'
 import Footer from '../components/footer'
 import Cards from '../components/cards'
 import Login from '../components/login'
 import Register from '../components/register'
 
-export default function Home() {
+export default function LoginPage() {
   return (
     <div className={styles.container}>
       {/* The Head */}
@@ -20,18 +20,12 @@ export default function Home() {
       </Head>
 
       {/* The Navigation Bar */}
-        <Navbar/>
-
-
-
-      <main className={styles.main}>
-        {/* Login Form */}
-      <Balance/>
-      <Login/>
-      </main>
+      <PageLayout>
+          <Login/>
+      </PageLayout>
 
       {/* The Footer */}
-        <Footer/>
+        {/* <Footer/> */}
 
     </div>
   )

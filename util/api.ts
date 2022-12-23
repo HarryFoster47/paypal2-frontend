@@ -36,6 +36,7 @@ export interface Contact extends IContact {
 export interface Account {
 	id: number;
 	balance: number;
+	user?: User;
 	incomingTransactions?: Transaction[];
 	outgoingTransactions?: Transaction[];
 }
@@ -54,10 +55,20 @@ export enum TransactionType {
 export interface Transaction {
 	id: number;
 	amount: number;
-	transferredAt: string;
+	transferredAt: Date;
 	recipient?: Account;
 	sender?: Account;
 	type: TransactionType;
+	message: string | null;
+}
+
+interface UnparsedTransaction {
+	id: number;
+	amount: number;
+	transferredAt: string;
+	recipient?: Account;
+	sender?: Account;
+	type: string;
 	message: string | null;
 }
 
@@ -81,6 +92,7 @@ export const login = async (
 			case 409:
 				return "User disabled";
 		}
+		return error.message;
 	}
 };
 
@@ -104,6 +116,7 @@ export const register = async (
 			case 409:
 				return "Username already taken";
 		}
+		return error.message;
 	}
 };
 
@@ -125,6 +138,7 @@ export const logout = async () => {
 	} catch (e) {
 		const error = e as AxiosError;
 		console.log(error);
+		return error.message;
 	}
 };
 
@@ -173,6 +187,7 @@ export const addContact = async (
 			case 404:
 				return "User not found";
 		}
+		return error.message;
 	}
 };
 
@@ -191,6 +206,7 @@ export const deleteContact = async (
 			case 404:
 				return "User not found";
 		}
+		return error.message;
 	}
 };
 
@@ -237,6 +253,7 @@ export const withdraw = async (amount: Number): Promise<String | undefined> => {
 			case 400:
 				return error.message;
 		}
+		return error.message;
 	}
 };
 
@@ -253,7 +270,15 @@ export const deposit = async (amount: Number): Promise<String | undefined> => {
 			case 400:
 				return "Invalid amount";
 		}
+		return error.message;
 	}
+};
+
+const parseTransaction = (transaction: UnparsedTransaction): Transaction => {
+	const copy = { ...transaction } as any;
+	copy.transferredAt = new Date(copy.transferredAt);
+	copy.type = TransactionType[copy.type];
+	return copy as Transaction;
 };
 
 export const getTransactions = async (): Promise<
@@ -261,7 +286,9 @@ export const getTransactions = async (): Promise<
 > => {
 	try {
 		const response = await instance.get("/account/transactions");
-		return response.data;
+		return response.data.map((t: UnparsedTransaction) =>
+			parseTransaction(t)
+		);
 	} catch (e) {
 		const error = e as AxiosError;
 		switch (error.status) {
@@ -271,8 +298,8 @@ export const getTransactions = async (): Promise<
 			case 400:
 				return "Invalid limit";
 		}
+		return error.message;
 	}
-	return null;
 };
 
 export const sendMoney = async (
@@ -296,5 +323,6 @@ export const sendMoney = async (
 			case 400:
 				return "Invalid amount";
 		}
+		return error.message;
 	}
 };

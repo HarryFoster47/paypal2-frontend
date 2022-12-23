@@ -37,10 +37,10 @@ const Articles = () => {
 	];
 	return (
 		<div className={styles.sectionArticles}>
-			<div className={styles.sectionTitle}>Our guides</div>
+			<h3 className={styles.sectionTitle}>Our guides</h3>
 			<div className={styles.articlesWrapper}>
 				{articles.map((item) => (
-					<div className={styles.article}>
+					<div key={item.id} className={styles.article}>
 						<div className={styles.imageSection}>
 							<img src={item.image} />
 						</div>

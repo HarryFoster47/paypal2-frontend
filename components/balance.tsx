@@ -17,7 +17,6 @@ const Balance = (props: {
 
 		useEffect(() => {
 			getBalance().then((data) => {
-				console.log(data);
 				_setbalance(data ?? 0);
 			});
 		}, []);

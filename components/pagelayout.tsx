@@ -20,7 +20,7 @@ const PageLayout = (props: React.PropsWithChildren) => {
 				}
 			}
 		});
-	});
+	}, [loggedIn]);
 
 	return (
 		<main className={styles.page}>

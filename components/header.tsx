@@ -15,7 +15,7 @@ const Header = (props: { loggedIn: boolean }) => {
 		getUser().then((data) => {
 			setUser(data);
 		});
-	});
+	}, [user]);
 
 	return (
 		<header className={styles.header}>

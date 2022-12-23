@@ -1,7 +1,13 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 import styles from "../styles/components/RecentTransactions.module.css";
-import { getTransactions, Transaction } from "../util/api";
+import {
+	getTransactions,
+	getUser,
+	Transaction,
+	User,
+	UserWithAccount,
+} from "../util/api";
 import TransactionComp from "./TransactionComp";
 
 const RecentTransactions = (props: {
@@ -20,12 +26,18 @@ const RecentTransactions = (props: {
 
 		useEffect(() => {
 			getTransactions().then((data) => {
-				console.log(data);
 				if (typeof data == "string") return;
 				_setTransactions((data as Transaction[]) ?? []);
 			});
 		}, []);
 	}
+
+	let [user, setUser] = useState<UserWithAccount | null>(null);
+	useEffect(() => {
+		getUser().then((data) => {
+			setUser(data);
+		});
+	});
 
 	return (
 		<section
@@ -35,10 +47,16 @@ const RecentTransactions = (props: {
 					: styles.transactionsSection
 			}
 		>
-			<h3>Recent Transactions</h3>
+			<h3>Transactions</h3>
 			<section className={styles.transactionsList}>
 				{transactions.map((transaction) => {
-					return <TransactionComp transaction={transaction} />;
+					return (
+						<TransactionComp
+							key={transaction.id}
+							transaction={transaction}
+							user={user}
+						/>
+					);
 				})}
 			</section>
 		</section>

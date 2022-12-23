@@ -4,7 +4,8 @@
 
 .content {
 	width: 100%;
-	height: calc(100% - 50px);
+	height: minmax(100% auto);
+	/* height: calc(100% - 50px); */
 	min-height: calc(100% - 50px);
 	background-color: #181818;
 	position: relative;
@@ -12,7 +13,7 @@
 }
 
 @media screen and (max-width: 800px) {
-	.content {
+	.loggedIn {
 		padding-bottom: 80px;
 	}
 }

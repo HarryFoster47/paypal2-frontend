@@ -17,6 +17,7 @@ const RegisterForm = () => {
 					<input
 						className={styles.input}
 						type="text"
+						name="username"
 						placeholder="username"
 						onChange={(e) => {
 							setusername(e.target.value);
@@ -25,6 +26,7 @@ const RegisterForm = () => {
 					<input
 						className={styles.input}
 						type="email"
+						name="email"
 						placeholder="name@example.com"
 						onChange={(e) => {
 							setemail(e.target.value);
@@ -33,6 +35,7 @@ const RegisterForm = () => {
 					<input
 						className={styles.input}
 						type="password"
+						name="password"
 						placeholder="password"
 						onChange={(e) => {
 							setpassword(e.target.value);

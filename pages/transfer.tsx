@@ -4,7 +4,7 @@ import SendMoneyForm from "../components/forms/SendMoneyForm";
 import styles from "../styles/pages/Transfer.module.css";
 import WithdrawDepositMoneyForm from "../components/forms/WithdrawDepositMoneyForm";
 import { useEffect, useState } from "react";
-import { getBalance } from "../util/api";
+import { getBalance, getTransactions, Transaction } from "../util/api";
 import RecentTransactions from "../components/RecentTransactions";
 
 export default function TransferPage() {
@@ -12,10 +12,22 @@ export default function TransferPage() {
 
 	useEffect(() => {
 		getBalance().then((data) => {
-			console.log(data);
 			setBalance(data ?? 0);
 		});
 	}, [balance]);
+
+	const [transactions, setTransactions] = useState<Transaction[]>([]);
+
+	const updateTransactions = () => {
+		getTransactions().then((data) => {
+			if (typeof data == "string") return;
+			setTransactions(data ? (data.slice(0, 5) as Transaction[]) : []);
+		});
+	};
+
+	useEffect(() => {
+		updateTransactions();
+	});
 
 	return (
 		<PageLayout>
@@ -48,6 +60,7 @@ export default function TransferPage() {
 							setBalance((bal) => {
 								return bal + amount;
 							});
+							updateTransactions();
 						}}
 					/>
 					<SendMoneyForm
@@ -56,10 +69,15 @@ export default function TransferPage() {
 							setBalance((bal) => {
 								return bal - amount;
 							});
+							updateTransactions();
 						}}
 					/>
 				</div>
-				<RecentTransactions className={styles.transactions} />
+				<RecentTransactions
+					className={styles.transactions}
+					transactions={transactions}
+					setTransactions={setTransactions}
+				/>
 			</main>
 		</PageLayout>
 	);

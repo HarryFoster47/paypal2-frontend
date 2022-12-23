@@ -19,7 +19,7 @@
 .transactions {
 	display: none;
 	visibility: hidden;
-	height: 0;
+	max-height: 0;
 }
 
 @media screen and (min-width: 800px) {
@@ -33,7 +33,7 @@
 	.transactions {
 		display: unset;
 		visibility: unset;
-		height: unset;
+		max-height: unset;
 	}
 
 	.mobileForm {

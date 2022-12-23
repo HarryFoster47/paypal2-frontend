@@ -1,19 +1,21 @@
 .section {
 	background-color: #333333;
 	border-radius: 10px;
-	padding-left: 20px;
-	padding-bottom: 20px;
+	padding: 10px;
 }
 
 .section h3 {
-	font-weight: 500;
+	text-align: center;
+	/* font-weight: 500; */
 	padding-left: 7px;
-	padding-bottom: 12px;
 }
 
 .contactsWrapper {
 	width: 100%;
 	display: flex;
+	gap: 7px;
+	overflow: hidden;
+	overflow-x: auto;
 }
 
 .contact {
@@ -21,13 +23,21 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	height: 100%;
+	min-width: 50px;
 }
 
 .contactsWrapper img {
-	width: 50px;
+	width: 40px;
 	margin: 7px;
 }
 
 .name {
 	font-size: 0.6rem;
+}
+
+@media screen and (max-width: 800px) {
+	.section {
+		border-radius: 0;
+	}
 }

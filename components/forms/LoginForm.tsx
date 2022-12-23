@@ -9,7 +9,7 @@ const LoginForm = () => {
 	const [username, setusername] = useState("");
 	const [password, setpassword] = useState("");
 	return (
-		<section className={styles.center}>
+		<section className={styles.centerForce}>
 			<form className={styles.form}>
 				<h1>Login</h1>
 				<section className={styles.inputs}>

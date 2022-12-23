@@ -21,6 +21,7 @@ export default function TransferPage() {
 	const updateTransactions = () => {
 		getTransactions().then((data) => {
 			if (typeof data == "string") return;
+			// console.log(data);
 			setTransactions(data ? (data.slice(0, 5) as Transaction[]) : []);
 		});
 	};

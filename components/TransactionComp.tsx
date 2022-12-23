@@ -29,6 +29,7 @@ const TransactionComp = (props: {
 		case TransactionType.DEPOSIT:
 			title = "Deposit";
 			desc = "Money in";
+			break;
 		case TransactionType.WITHDRAW:
 			title = "Withdraw";
 			desc = "Money out";
